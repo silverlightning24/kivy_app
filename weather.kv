@@ -5,12 +5,18 @@
         anchor_y:"top"
         ToolBox:
             id:_tool_box
+            drawing_space:_drawing_space
             size_hint:None,None
+            MyApp: root
             width:100
     AnchorLayout:
         anchor_x:"right"
         anchor_y:"top"
         DrawingSpace:
+            id:_drawing_space
+            status_bar:_status_bar
+            tool_box:_tool_box
+
             size_hint:None,None
             width:root.width - _tool_box.width
 
@@ -24,6 +30,7 @@
             GeneralOptions:
                 id:_general_options
                 size_hint:1, None
+                MyApp:root
                 height:48
             StatusBar:
                 id:_status_bar
